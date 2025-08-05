@@ -38,3 +38,23 @@ Ensure that the specific version of bb (berratenberg) is installed on the runnin
 bb --version
 0.84.0
 ```
+
+
+## Deployment
+```bash
+forge script script/DeployPanagram.s.sol:DeployPanagram \
+  --rpc-url $SEPOLIA_RPC_URL \
+  --private-key $PRIVATE_KEY \
+  --broadcast \
+  --verify \
+  -vvvv
+```
+
+``` bash
+forge script script/DeployPanagram.s.sol:DeployPanagram \
+  --rpc-url $SEPOLIA_RPC_URL \
+  --private-key $PRIVATE_KEY \
+  --broadcast \
+  --optimize true \
+  --optimizer-runs 200
+```
